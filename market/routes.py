@@ -1,7 +1,7 @@
 
 from market import app
 #flash is a built in function used to display messsages in the client side 
-from flask import render_template, redirect, url_for, flash, 
+from flask import render_template, redirect, url_for, flash
 from market.models import Item, User
 from market.forms import RegisterForm
 from market import db
@@ -25,12 +25,13 @@ def register_page():
     if form.validate_on_submit():
         user_to_create = User(username = form.username.data,
                               email_address = form.email_address.data,
-                              password_harshed = form.password.data)
+                              password_harshed = form.password1.data)
         db.session.add(user_to_create)
         db.session.commit()
+     
         return redirect (url_for('shop_page'))
     
-# from.errors is a built in function to check if our validation is going to fail
+        #form.errors is a built in function to check if our validation is going to fail
     if form.errors != {}:                                       #if there are no errors from the validation
         for err_msg in form.errors.values():                    #itetrating over the err
             flash(f'There was an error with creating a user: {err_msg}')

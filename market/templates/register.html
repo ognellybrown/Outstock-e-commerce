@@ -24,6 +24,8 @@
         <link rel="stylesheet" href="/static/css/style.css">
     </head>
     <body>
+
+        
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -402,6 +404,7 @@
         </section>
         <div class="body-overlay transition-3"></div>
         <!-- extra info area end -->
+        
         <main>
         
             <!-- page title area start -->
@@ -426,15 +429,29 @@
                 </div>
             </section>
             <!-- page title area end -->
-
+        
+        
             <!-- login Area Strat-->
             <section class="login-area pt-100 pb-100">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="basic-login">
+                                {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}">
+                                        <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                                   
                                 <h3 class="text-center mb-60">Signup From Here</h3>
-                                <form action="POST" class="form-register">
+                                <form method="POST" class="form-register">
                                     <!-- the form.hidden_tag protects from cross request forgery by generating some token -->
                                     {{ form.hidden_tag() }} 
 
@@ -450,9 +467,11 @@
                                     {{ form.password2.label() }}
                                     {{ form.password2( class="form-control",placeholder="Enter password" ) }}
 
+                                    {{ form.submit(class="os-btn os-btn-black w-100") }}
+
                                     
 
-                                    <a href="{{ url_for('shop_page')}}" class="os-btn w-100">Register Now</a>
+                                    <!-- <a href="{{ url_for('shop_page')}}" class="os-btn w-100">Register Now</a> -->
                                     
                                     <div class="mt-10"></div>
                                     
