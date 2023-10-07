@@ -34,7 +34,7 @@ def register_page():
         #form.errors is a built in function to check if our validation is going to fail
     if form.errors != {}:                                       #if there are no errors from the validation
         for err_msg in form.errors.values():                    #itetrating over the err
-            flash(f'There was an error with creating a user: {err_msg}')
+            flash(f'There was an error with creating a user: {err_msg}', category='danger')
 
 
 
