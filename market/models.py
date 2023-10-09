@@ -1,4 +1,5 @@
 from market import db
+from market import bcrypt
 
 
 class User(db.Model):
@@ -8,7 +9,13 @@ class User(db.Model):
     password_harshed = db.Column(db.String(60), nullable = False) 
     items = db.relationship('Item', backref="owned_user", lazy = True)  #for the view Cart to know the goods the owner have in the view cart section   
 
+    @property
+    def password(self):
+        return self.password
 
+    @password.setter
+    def password(self, plain_text_password):
+        self.password_harshed = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
 
 class Item(db.Model):
     id = db.Column(db.Integer(), primary_key=True)

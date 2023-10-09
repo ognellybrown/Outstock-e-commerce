@@ -24,8 +24,6 @@
         <link rel="stylesheet" href="/static/css/style.css">
     </head>
     <body>
-
-        
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -404,87 +402,66 @@
         </section>
         <div class="body-overlay transition-3"></div>
         <!-- extra info area end -->
+
+    <main>
         
-        <main>
-        
-            <!-- page title area start -->
-            <section class="page__title p-relative d-flex align-items-center" data-background="/static/img/page-title/page-title-1.jpg">
-                <div class="container">
-                
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="page__title-inner text-center">
-                                <h1>Register</h1>
-                                <div class="page__title-breadcrumb">                                 
-                                    <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb justify-content-center">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page"> Register</li>
-                                    </ol>
-                                    </nav>
+        <!-- page title area start -->
+        <section class="page__title p-relative d-flex align-items-center" data-background="/static/img/page-title/page-title-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page__title-inner text-center">
+                            <h1>Login</h1>
+                            <div class="page__title-breadcrumb">                                 
+                                <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"> Login</li>
+                                </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- page title area end -->
+
+        <!-- login Area Strat-->
+        <section class="login-area pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="basic-login">
+                            <h3 class="text-center mb-60">Login From Here</h3>
+                            <form action="POST" class="form-login">
+                                {{ form.email_address.label() }}
+                                {{ form.email_address( class="form-control",placeholder="Email Address" ) }}
+
+                                {{ form.password.label() }}
+                                {{ form.password( class="form-control",placeholder="Enter password" ) }}
+                                
+                                <div class="login-action mb-20 fix">
+                                    <span class="log-rem f-left">
+                                        <input id="remember" type="checkbox">
+                                        <label for="remember">Remember me!</label>
+                                    </span>
+                                    <span class="forgot-login f-right">
+                                        <a href="#">Lost your password?</a>
+                                    </span>
                                 </div>
-                            </div>
+                                {{ form.submit(class="os-btn os-btn-black w-100") }}
+                                
+                                <div class="or-divide"><span>or</span></div>
+                                <a href="{{ url_for('register_page')}}" class="os-btn os-btn-black w-100">Register Now</a>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- page title area end -->
-        
-        
-            <!-- login Area Strat-->
-            <section class="login-area pt-100 pb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="basic-login">
-                                {% with messages = get_flashed_messages(with_categories=true) %}
-                                {% if messages %}
-                                    {% for category, message in messages %}
-                                    <div class="alert alert-{{ category }}">
-                                        <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        {{ message }}
-                                    </div>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endwith %}
-                                   
-                                <h3 class="text-center mb-60">Signup From Here</h3>
-                                <form method="POST" class="form-register">
-                                    <!-- the form.hidden_tag protects from cross request forgery by generating some token -->
-                                    {{ form.hidden_tag() }} 
-
-                                    {{ form.username.label() }}
-                                    {{ form.username( class="form-control",placeholder="Enter Username" ) }}
-
-                                    {{ form.email_address.label() }}
-                                    {{ form.email_address( class="form-control",placeholder="Email Address" ) }}
-
-                                    {{ form.password1.label() }}
-                                    {{ form.password1( class="form-control",placeholder="Enter password" ) }}
-
-                                    {{ form.password2.label() }}
-                                    {{ form.password2( class="form-control",placeholder="Enter password" ) }}
-
-                                    {{ form.submit(class="os-btn os-btn-black w-100") }}
-
-                                    
-
-                                    <!-- <a href="{{ url_for('shop_page')}}" class="os-btn w-100">Register Now</a> -->
-                                    
-                                    <div class="mt-10"></div>
-                                    
-                                    <div class="or-divide"><span>or</span></div>
-                                    <a href="{{ url_for('login_page')}}" class="os-btn os-btn-black w-100">login Now</a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- login Area End-->
-        </main>
+            </div>
+        </section>
+        <!-- login Area End-->
+    </main>
 
         <!-- footer area start -->
         <section class="footer__area footer-bg">
@@ -497,7 +474,7 @@
                                     <a href="index.html"><img src="/static/img/logo/logo-2.png" alt="logo"></a>
                                 </div>
                                 <div class="footer__widget-content">
-                                    <p>Outstock is a premium Store where you can shop and buy all your neds. Shop with Outlook today.</p>
+                                    <p>Outstock is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
                                     <div class="footer__contact">
                                         <ul>
                                             <li>
@@ -513,7 +490,7 @@
                                                     <i class="fal fa-envelope-open-text"></i>
                                                 </div>
                                                 <div class="text">
-                                                    <span>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ccfe3e2f8edeff8cceeedffe5eff8e4e9e1e9a2efe3e1">[email&#160;protected]</a></span>
+                                                    <span>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e8ab87869c898b9ca88a899b818b9c808d858dc68b8785">[email&#160;protected]</a></span>
                                                 </div>
                                             </li>
                                             <li>
@@ -592,7 +569,7 @@
             </div>
         </section>
         <!-- footer area end -->
-        
+
 		<!-- JS here -->
         <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/static/js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="/static/js/vendor/jquery-3.6.0.min.js"></script>
@@ -608,6 +585,6 @@
         <script src="/static/js/wow.min.js"></script>
         <script src="/static/js/imagesloaded.pkgd.min.js"></script>
         <script src="/static/js/main.js"></script>
-    </body>
+</body>
 
 </html>

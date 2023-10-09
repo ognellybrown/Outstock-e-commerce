@@ -3,7 +3,7 @@ from market import app
 #flash is a built in function used to display messsages in the client side 
 from flask import render_template, redirect, url_for, flash
 from market.models import Item, User
-from market.forms import RegisterForm
+from market.forms import RegisterForm, LoginForm
 from market import db
 
 @app.route("/")
@@ -22,10 +22,10 @@ def shop_page():
 @app.route("/register", methods=["GET","POST"])
 def register_page():
     form = RegisterForm()
-    if form.validate_on_submit():
+    if form.validate_on_submit(): 
         user_to_create = User(username = form.username.data,
                               email_address = form.email_address.data,
-                              password_harshed = form.password1.data)
+                              password = form.password1.data)
         db.session.add(user_to_create)
         db.session.commit()
      
@@ -43,9 +43,12 @@ def register_page():
 
 # "{{ url_for('home_page)}}"
 
-# @app.route("/Login")
-# def login_page():
-#     return render_template("login.html")
+@app.route("/Login", methods = ['GET', 'POST'])
+def login_page():
+    form = LoginForm()
+    # if form.validate_on_submit():
+
+    return render_template("login.html", form=form)
 
 # @app.route('/blog')
 # def blog_page():
