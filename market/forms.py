@@ -22,6 +22,6 @@ class RegisterForm(FlaskForm):
     #         raise ValidationError('Email Address Already Exists, please try a different Email')
 
 class LoginForm(FlaskForm):
-    email_address = StringField(label= "Email address", validators=[Length(min=2, max=20), DataRequired()])
+    username = StringField(label= "Enter Username", validators=[Length(min=2, max=20), DataRequired()])
     password = PasswordField(label= "Enter Password", validators=[Length(min=2, max=20), DataRequired()]) 
     submit = SubmitField(label = "LOGIN NOW")
