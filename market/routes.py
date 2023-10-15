@@ -6,6 +6,7 @@ from market.models import Item, User
 from market.forms import RegisterForm, LoginForm
 from market import db
 from flask_login import login_user
+from sqlalchemy.exc import IntegrityError
 
 @app.route("/")
 def home_page():
@@ -20,31 +21,57 @@ def shop_page():
 
 
 
-@app.route("/register", methods=["GET","POST"])
+
+
+@app.route("/register", methods=["GET", "POST"])
 def register_page():
     form = RegisterForm()
-    if form.validate_on_submit(): 
-        user_to_create = User(username = form.username.data,
-                              email_address = form.email_address.data,
-                              password = form.password1.data)
-        db.session.add(user_to_create)
-        db.session.commit()
-     
-        return redirect (url_for('shop_page'))
-    
-        #form.errors is a built in function to check if our validation is going to fail
-    if form.errors != {}:                                       #if there are no errors from the validation
-        for err_msg in form.errors.values():                    #itetrating over the err
-            flash(f'There was an error with creating a user: {err_msg}', category='danger')
-
-
+    if form.validate_on_submit():
+        try:
+            user_to_create = User(
+                username=form.username.data,
+                email_address=form.email_address.data,
+                password=form.password1.data
+            )
+            db.session.add(user_to_create)
+            db.session.commit()
+            return redirect(url_for('shop_page'))
+        except IntegrityError as e:
+            db.session.rollback()  # Rollback the transaction
+            if "UNIQUE constraint failed: user.email_address" in str(e):
+                flash('Email address already exists. Please choose a different one.', 'danger')
+            if "UNIQUE constraint failed: user.username" in str(e):
+                flash('Username already exists. Please choose a different one.', 'danger')
 
     return render_template("register.html", form=form)
 
 
+
+# @app.route("/register", methods=["GET","POST"])
+# def register_page():
+#     form = RegisterForm()
+#     if form.validate_on_submit(): 
+#         user_to_create = User(username = form.username.data,
+#                               email_address = form.email_address.data,
+#                               password = form.password1.data)
+#         db.session.add(user_to_create)
+#         db.session.commit()
+
+#         return redirect (url_for('shop_page'))
+    
+#         #form.errors is a built in function to check if our validation is going to fail
+#     if form.errors != {}:                                       #if there are no errors from the validation
+#         for err_msg in form.errors.values():                    #itetrating over the err
+#             flash(f'There was an error with creating a user: {err_msg}', category='danger')
+
+
+
+    # return render_template("register.html", form=form)
+
+
 # "{{ url_for('home_page)}}"
 
-@app.route("/login", methods = ['GET', 'POST'])
+@app.route("/login", methods = ['GET','POST'])
 def login_page():
     form = LoginForm()
     if form.validate_on_submit():
