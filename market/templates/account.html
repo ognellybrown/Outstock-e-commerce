@@ -24,8 +24,6 @@
         <link rel="stylesheet" href="/static/css/style.css">
     </head>
     <body>
-
-        
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -59,14 +57,77 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul>
-                                            <li class="active has-dropdown"><a href="{url_for('register_page')}">Home</a>
-                                                
+                                            <li class="active has-dropdown"><a href="index.html">Home</a>
+                                                <ul class="submenu transition-3">
+                                                    <li><a href="index.html">Home Style 1</a></li>
+                                                    <li><a href="index-2.html">Home Style 2</a></li>
+                                                    <li><a href="index-3.html">Home Style 3</a></li>
+                                                    <li><a href="index-4.html">Home Style 4</a></li>
+                                                    <li><a href="index-5.html">Home Style 5</a></li>
+                                                    <li><a href="index-6.html">Home Style 6</a></li>
+                                                    <li><a href="index-7.html">Home Style 7</a></li>
+                                                </ul>
                                             </li>
-                                            <li class="mega-menu has-dropdown"><a href="{url_for('register_page')}">Shop</a>
-                                                <ul class="submenu transition-3" data-background="/static/img/bg/mega-menu-bg.jpg"></ul>
+                                            <li class="mega-menu has-dropdown"><a href="shop.html">Shop</a>
+                                                <ul class="submenu transition-3" data-background="/static/img/bg/mega-menu-bg.jpg">
+                                                    <li class="has-dropdown">
+                                                        <a href="shop.html">Shop Pages</a>
+                                                        <ul>
+                                                            <li><a href="shop.html">Standard Shop Page</a></li>
+                                                            <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                                            <li><a href="shop-4-col.html">Shop 4 Column</a></li>
+                                                            <li><a href="shop-3-col.html">Shop 3 Column</a></li>
+                                                            <li><a href="shop.html">Shop Page</a></li>
+                                                            <li><a href="shop.html">Shop Page </a></li>
+                                                            <li><a href="shop.html">Shop Infinity</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-dropdown">
+                                                        <a href="shop.html">Products Pages</a>
+                                                        <ul>
+                                                            <li><a href="product-details.html">Product Details</a></li>
+                                                            <li><a href="product-details.html">Product Page V2</a></li>
+                                                            <li><a href="product-details.html">Product Page V3</a></li>
+                                                            <li><a href="product-details.html">Product Page V4</a></li>
+                                                            <li><a href="product-details.html">Simple Product</a></li>
+                                                            <li><a href="product-details.html">Variable Product</a></li>
+                                                            <li><a href="product-details.html">External Product</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-dropdown">
+                                                        <a href="shop.html">Other Shop Pages</a>
+                                                        <ul>
+                                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                                            <li><a href="cart.html">Shopping Cart</a></li>
+                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="register.html">Register</a></li>
+                                                            <li><a href="login.html">Login</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li class="has-dropdown"><a href="{url_for('register_page')}">Blog</a></li>
-                                           
+                                            <li class="has-dropdown"><a href="blog.html">Blog</a>
+                                                <ul class="submenu transition-3">
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                                    <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
+                                                    <li><a href="blog-2-col.html">Blog 2 Column</a></li>
+                                                    <li><a href="blog-2-col-mas.html">BLog 2 Col Masonary</a></li>
+                                                    <li><a href="blog-3-col.html">Blog 3 Column</a></li>
+                                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-dropdown"><a href="shop.html">Pages</a>
+                                                <ul class="submenu transition-3">
+                                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                                    <li><a href="cart.html">Shopping Cart</a></li>
+                                                    <li><a href="checkout.html">Checkout</a></li>
+                                                    <li><a href="account.html">My Account</a></li>
+                                                    <li><a href="register.html">Register</a></li>
+                                                    <li><a href="login.html">Login</a></li>
+                                                    <li><a href="error.html">Error 404</a></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
@@ -164,8 +225,10 @@
                                                             <h5>My Account</h5>
                                                         </div>
                                                         <ul>
-                                                          
-                                                            
+                                                            <li><a href="account.html">My Account</a></li>
+                                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                                            <li><a href="cart.html">Cart</a></li>
+                                                            <li><a href="checkout.html">Checkout</a></li>
                                                             <li><a href="register.html">Create Account</a></li>
                                                         </ul>
                                                     </div>
@@ -339,87 +402,231 @@
         </section>
         <div class="body-overlay transition-3"></div>
         <!-- extra info area end -->
+
+    <main>
         
-        <main>
-        
-            <!-- page title area start -->
-            <section class="page__title p-relative d-flex align-items-center" data-background="/static/img/page-title/page-title-1.jpg">
-                <div class="container">
-                
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="page__title-inner text-center">
-                                <h1>Register</h1>
-                                <div class="page__title-breadcrumb">                                 
-                                    <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb justify-content-center">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page"> Register</li>
-                                    </ol>
-                                    </nav>
-                                </div>
+        <!-- page title area start -->
+        <section class="page__title p-relative d-flex align-items-center" data-background="/static/img/page-title/page-title-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page__title-inner text-center">
+                            <h1>Login</h1>
+                            <div class="page__title-breadcrumb">                                 
+                                <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"> Login</li>
+                                </ol>
+                                </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- page title area end -->
-        
-        
-            <!-- login Area Strat-->
-            <section class="login-area pt-100 pb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="basic-login">
-                                {% with messages = get_flashed_messages(with_categories=true) %}
-                                {% if messages %}
-                                    {% for category, message in messages %}
-                                    <div class="alert alert-{{ category }}">
-                                        <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        {{ message }}
+            </div>
+        </section>
+        <!-- page title area end -->
+
+         <!-- profile area start -->
+         <section class="profile__area pt-120 pb-50 grey-bg">
+            <div class="container">
+               <div class="profile__basic-inner pb-20 bg-white">
+                  <div class="row align-items-center">
+                     <div class="col-xxl-6 col-md-6">
+                        <div class="profile__basic d-md-flex align-items-center">
+                           <div class="profile__basic-thumb mr-30">
+                              <img src="/static/img/testimonial/person-1.jpg" alt="">
+                           </div>
+                           <div class="profile__basic-content">
+                              <h3 class="profile__basic-title">
+                                 Welcome Back <span>Admin</span>
+                              </h3>
+                              <p>2 Running Courses <a href="my-course.html">View Course</a></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xxl-6 col-md-6">
+                        <div class="profile__basic-cart d-flex align-items-center justify-content-md-end">
+                           <div class="cart-info mr-10">
+                              <a href="cart.html">View cart</a>
+                           </div>
+                           <div class="cart-item">
+                              <a href="cart.html">
+                                 <i class="fa-regular fa-basket-shopping"></i>
+                                 <span class="cart-quantity">2</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- profile area end -->
+
+         <!-- profile menu area start -->
+         <section class="profile__menu pb-70 grey-bg">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xxl-4 col-md-4">
+                     <div class="profile__menu-left bg-white mb-50">
+                        <h3 class="profile__menu-title"><i class="fa fa-list-alt"></i> Your Menu</h3>
+                        <div class="profile__menu-tab">
+                           <div class="nav nav-tabs flex-column justify-content-start text-start" id="nav-tab" role="tablist">
+                              <button class="nav-link active" id="nav-account-tab" data-toggle="tab" data-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="true"> <i class="fa fa-user"></i> My Account</button>
+                              <button class="nav-link" id="nav-order-tab" data-toggle="tab" data-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false"><i class="fa fa-file"></i>Orders</button>
+                              <button class="nav-link" id="nav-password-tab" data-toggle="tab" data-target="#nav-password" type="button" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Change Password</button>
+                              <button class="nav-link">
+                                <a href="{{url_for('login_page')}}"> <!-- Add the href attribute with the URL of the login page -->
+                                    <i class="fa fa-sign-out"></i> Logout
+                                </a>
+                            </button>
+                            
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xxl-8 col-md-8">
+                     <div class="profile__menu-right">
+                        <div class="tab-content" id="nav-tabContent">
+                           <div class="tab-pane fade show active" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab">
+                              <div class="profile__info">
+                                 <div class="profile__info-top d-flex justify-content-between align-items-center">
+                                    <h3 class="profile__info-title">Profile Information</h3>
+                                    <button class="profile__info-btn" type="button" data-toggle="modal" data-target="#profile_edit_modal"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</button>
+                                 </div>
+
+                                 <div class="profile__info-wrapper white-bg">
+                                    <div class="profile__info-item">
+                                       <p>Name</p>
+                                       <h4>Emmanuel Nelly Ogodor</h4>
                                     </div>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endwith %}
-                                   
-                                <h3 class="text-center mb-60">Signup From Here</h3>
-                                <form method="POST" class="form-register">
-                                    <!-- the form.hidden_tag protects from cross request forgery by generating some token -->
-                                    {{ form.hidden_tag() }} 
+                                    <div class="profile__info-item">
+                                       <p>Email</p>
+                                       <h4><a href="mailt:outstock@hotmail.com" class="__cf_email__" data-cfemail="94fdfaf2fbd4f1f0e1fff1e6baf7fbf9"><span class="__cf_email__" data-cfemail="d2bda7a6a1a6bdb1b992babda6bfb3bbbefcb1bdbf">[email&#160;protected]</span></a></h4>
+                                    </div>
+                                    <div class="profile__info-item">
+                                       <p>Phone</p>
+                                       <h4>(325) 463-5693</h4>
+                                    </div>
+                                    <div class="profile__info-item">
+                                       <p>Address</p>
+                                       <h4>ikoyi lagos, Nigeria</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
+                              <div class="order__info">
+                                 <div class="order__info-top d-flex justify-content-between align-items-center">
+                                    <h3 class="order__info-title">My Orders</h3>
+                                    <button type="button" class="order__info-btn"><i class="fa-regular fa-trash-can"></i> Clear</button>
+                                 </div>
 
-                                    {{ form.username.label() }}
-                                    {{ form.username( class="form-control",placeholder="Enter Username" ) }}
+                                 <div class="order__list white-bg table-responsive">
+                                    <table class="table">
+                                       <thead>
+                                         <tr>
+                                           <th scope="col">Order ID</th>
+                                           <th scope="col">Name</th>
+                                           <th scope="col">Price</th>
+                                           <th scope="col">Details</th>
+                                         </tr>
+                                       </thead>
+                                       <tbody>
+                                         <tr>
+                                           <td class="order__id">#3520</td>
+                                           <td><a href="product-details.html" class="order__title">University seminar series global.</a></td>
+                                           <td>$144.00</td>
+                                           <td><a href="product-details.html" class="order__view-btn">View</a></td>
+                                         </tr>
+                                         <tr>
+                                           <td class="order__id">#2441</td>
+                                           <td><a href="product-details.html" class="order__title">Web coding and apache basics</a></td>
+                                           <td>$59.54</td>
+                                           <td><a href="product-details.html" class="order__view-btn">View</a></td>
+                                         </tr>
+                                         <tr>
+                                           <td class="order__id">#2357</td>
+                                           <td><a href="product-details.html" class="order__title">Economics historical development</a></td>
+                                           <td>$89.90</td>
+                                           <td><a href="product-details.html" class="order__view-btn">View</a></td>
+                                         </tr>
+                                       </tbody>
+                                     </table>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
+                              <div class="password__change">
+                                 <div class="password__change-top">
+                                    <h3 class="password__change-title">Change Password</h3>
+                                 </div>
+                                 <div class="password__form white-bg">
+                                    <form action="#">
+                                       <div class="password__input">
+                                          <p>Old Password</p>
+                                          <input type="password" placeholder="Enter Old Password">
+                                       </div>
+                                       <div class="password__input">
+                                          <p>New Password</p>
+                                          <input type="password" placeholder="Enter New Password">
+                                       </div>
+                                       <div class="password__input">
+                                          <p>Confirm Password</p>
+                                          <input type="password" placeholder="Confirm Password">
+                                       </div>
+                                       <div class="password__input">
+                                          <button type="submit" class="os-btn os-btn-black">Update password</button>
+                                       </div>
+                                    </form>
+                                 </div>
+                              </div>
+                           </div>
+                         </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- profile menu area end -->
 
-                                    {{ form.email_address.label() }}
-                                    {{ form.email_address( class="form-control",placeholder="Email Address" ) }}
-
-                                    {{ form.password1.label() }}
-                                    {{ form.password1( class="form-control",placeholder="Enter password" ) }}
-
-                                    {{ form.password2.label() }}
-                                    {{ form.password2( class="form-control",placeholder="Enter password" ) }}
-
-                                    {{ form.submit(class="os-btn os-btn-black w-100") }}
-
-                                    
-
-                                    <!-- <a href="{{ url_for('shop_page')}}" class="os-btn w-100">Register Now</a> -->
-                                    
-                                    <div class="mt-10"></div>
-                                    
-                                    <div class="or-divide"><span>or</span></div>
-                                    <a href="{{ url_for('login_page')}}" class="os-btn os-btn-black w-100">login Now</a>
-                                </form>
-                            </div>
+         <div class="profile__edit-modal">
+            <!-- Modal -->
+            <div class="modal fade" id="profile_edit_modal" tabindex="-1" aria-labelledby="profile_edit_modal" aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                     <div class="profile__edit-wrapper">
+                        <div class="profile__edit-close">
+                           <button type="button" class="profile__edit-close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <!-- login Area End-->
-        </main>
+                        <form action="#">
+                           <div class="profile__edit-input">
+                              <p>Name</p>
+                              <input type="text" placeholder="Your Name">
+                           </div>
+                           <div class="profile__edit-input">
+                              <p>Email</p>
+                              <input type="text" placeholder="Your Email">
+                           </div>
+                           <div class="profile__edit-input">
+                              <p>Phone</p>
+                              <input type="text" placeholder="Your Phone">
+                           </div>
+                           <div class="profile__edit-input">
+                              <p>Address</p>
+                              <input type="text" placeholder="Your Address">
+                           </div>
+                           <div class="profile__edit-input">
+                              <button type="submit" class="os-btn os-btn-black w-100">Update</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+    </main>
 
         <!-- footer area start -->
         <section class="footer__area footer-bg">
@@ -432,7 +639,7 @@
                                     <a href="index.html"><img src="/static/img/logo/logo-2.png" alt="logo"></a>
                                 </div>
                                 <div class="footer__widget-content">
-                                    <p>Outstock is a premium Store where you can shop and buy all your neds. Shop with Outlook today.</p>
+                                    <p>Outstock is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
                                     <div class="footer__contact">
                                         <ul>
                                             <li>
@@ -448,7 +655,7 @@
                                                     <i class="fal fa-envelope-open-text"></i>
                                                 </div>
                                                 <div class="text">
-                                                    <span>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ccfe3e2f8edeff8cceeedffe5eff8e4e9e1e9a2efe3e1">[email&#160;protected]</a></span>
+                                                    <span>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c3f1312081d1f083c1e1d0f151f0814191119521f1311">[email&#160;protected]</a></span>
                                                 </div>
                                             </li>
                                             <li>
@@ -527,7 +734,7 @@
             </div>
         </section>
         <!-- footer area end -->
-        
+
 		<!-- JS here -->
         <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/static/js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="/static/js/vendor/jquery-3.6.0.min.js"></script>
@@ -543,6 +750,6 @@
         <script src="/static/js/wow.min.js"></script>
         <script src="/static/js/imagesloaded.pkgd.min.js"></script>
         <script src="/static/js/main.js"></script>
-    </body>
+</body>
 
 </html>

@@ -382,11 +382,26 @@
         <div class="body-overlay transition-3"></div>
         <!-- extra info area end -->
 
+
+
         <main>
+            
 
             <!-- page title area start -->
             <section class="page__title p-relative d-flex align-items-center" data-background="/static/img/page-title/page-title-1.jpg">
                 <div class="container">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}">
+                                        <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="page__title-inner text-center">
